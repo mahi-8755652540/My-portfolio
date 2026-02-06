@@ -2,7 +2,7 @@
 
 ## Contact Information
 
-- **Name:** Ma
+- **Name:** Mahindra Singh Bhartiya
 - **Email:** ms.auraiya@gmail.com
 - **Phone:** +91 8755652540
 - **Portfolio:** https://mahi-8755652540.github.io/My-portfolio/
