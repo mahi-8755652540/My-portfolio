@@ -2,9 +2,9 @@
 
 ## Contact Information
 
-- **Name:** MS Bhartiya
-- **Email:** your.email@example.com
-- **Phone:** +91 XXXXXXXXXX
+- **Name:** Ma
+- **Email:** ms.auraiya@gmail.com
+- **Phone:** +91 8755652540
 - **Portfolio:** https://mahi-8755652540.github.io/My-portfolio/
 - **Location:** India
 
