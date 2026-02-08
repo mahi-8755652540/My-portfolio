@@ -123,6 +123,18 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
+
+        <div className='mt-5 flex items-center gap-4'>
+          <p className='text-white font-medium'>Or reach me via:</p>
+          <a
+            href='https://wa.me/918755652540'
+            target='_blank'
+            rel='noreferrer'
+            className='text-[#25D366] font-bold hover:underline'
+          >
+            WhatsApp (8755652540)
+          </a>
+        </div>
       </motion.div>
 
       <motion.div

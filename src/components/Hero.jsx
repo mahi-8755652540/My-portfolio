@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
+import { Suspense, lazy } from "react";
 
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import { personalInfo } from "../constants";
+
+// Lazy load the 3D canvas to improve initial page load
+const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
 const Hero = () => {
   return (
@@ -16,16 +20,17 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>MS Bhartiya</span>
+            Hi, I'm <span className='text-[#915EFF]'>{personalInfo.name}</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I create stunning web experiences <br className='sm:block hidden' />
-            and captivating graphic designs
+            {personalInfo.tagline}
           </p>
         </div>
       </div>
 
-      <ComputersCanvas />
+      <Suspense fallback={<div className="w-full h-full" />}>
+        <ComputersCanvas />
+      </Suspense>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>

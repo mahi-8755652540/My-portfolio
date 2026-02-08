@@ -9,7 +9,7 @@ import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import ThankYou from "./ThankYou";
 import CanvasLoader from "./Loader";
-
+import WhatsApp from "./WhatsApp";
 
 export {
   Hero,
@@ -25,5 +25,6 @@ export {
   BallCanvas, 
   ComputersCanvas, 
   StarsCanvas,
-  ThankYou
+  ThankYou,
+  WhatsApp
 };

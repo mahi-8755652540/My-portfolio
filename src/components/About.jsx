@@ -26,6 +26,7 @@ const ServiceCard = ({ index, title, icon }) => (
           src={icon}
           alt='web-development'
           className='w-16 h-16 object-contain'
+          loading="lazy"
         />
 
         <h3 className='text-white text-[20px] font-bold text-center'>
@@ -49,12 +50,13 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          I'm a creative web developer and graphic designer with expertise in
-          crafting stunning visual experiences. From building responsive websites
-          with HTML, CSS, JavaScript, and React to creating captivating designs
-          in Photoshop, Illustrator, CorelDraw, and Canva—I bring ideas to life
-          through pixels and code. Let's collaborate to transform your vision into
-          reality with beautiful design and seamless functionality!
+          I'm a skilled full-stack developer and graphic designer with over 3 years
+          of hands-on experience building modern web applications. I specialize in
+          the MERN stack (MongoDB, Express, React, Node.js) and have a strong
+          background in creating visually stunning designs using Photoshop,
+          Illustrator, and CorelDraw. I excel at turning complex ideas into
+          clean, functional, and beautiful digital experiences. Let's work
+          together to bring your vision to life!
         </motion.p>
 
         <motion.div
@@ -65,6 +67,7 @@ const About = () => {
             src={profile}
             alt='profile'
             className='w-full h-full object-cover rounded-full bg-tertiary border-4 border-[#915EFF] shadow-card'
+            loading="lazy"
           />
         </motion.div>
       </div>

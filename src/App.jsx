@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, ThankYou } from "./components";
+import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas, ThankYou, WhatsApp } from "./components";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className='relative z-0 bg-primary'>
         <Routes>
           <Route path="/" element={
@@ -17,17 +17,17 @@ const App = () => {
               <Experience />
               <Tech />
               <Works />
-              <Feedbacks />
               <div className='relative z-0'>
                 <Contact />
                 <StarsCanvas />
               </div>
+              <WhatsApp />
             </>
           } />
           <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

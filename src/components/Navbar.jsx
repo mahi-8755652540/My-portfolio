@@ -29,38 +29,58 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
+      } w-full flex items-center py-3 fixed top-0 z-20 ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+      <div className='w-full grid grid-cols-3 items-center max-w-7xl mx-auto'>
+        {/* Left: Text */}
+        <div className='flex items-center'>
+          <p className='text-white text-[18px] font-bold hidden lg:block'>
+            MS Bhartiya <span className='text-secondary'>| Web & Graphic Designer</span>
+          </p>
+        </div>
+        
+        {/* Center: Logo ONLY */}
         <Link
           to='/'
-          className='flex items-center gap-2'
+          className='flex justify-center'
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-           MS Bhartiya &nbsp;
-            <span className='sm:block hidden'> | JavaScript Mastery</span>
-          </p>
+          <img src={logo} alt='logo' className='w-24 h-24 object-contain' />
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        {/* Right: Navigation */}
+        <ul className='list-none hidden lg:flex flex-row gap-4 items-center justify-end'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              } hover:text-white text-[15px] font-medium cursor-pointer`}
+              onClick={() => {
+                setActive(nav.title);
+                const element = document.getElementById(nav.id);
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              {nav.title}
             </li>
           ))}
+          <li>
+            <a
+              href="/resume.pdf"
+              download="MS_Bhartiya_Resume.pdf"
+              className='bg-tertiary py-2 px-5 rounded-xl text-white font-bold shadow-md shadow-primary hover:bg-[#915EFF] transition-colors text-[13px]'
+            >
+              Resume
+            </a>
+          </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -86,11 +106,25 @@ const Navbar = () => {
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
+                    const element = document.getElementById(nav.id);
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  {nav.title}
                 </li>
               ))}
+              <li>
+                <a
+                  href="/resume.pdf"
+                  download="MS_Bhartiya_Resume.pdf"
+                  className='font-poppins font-medium cursor-pointer text-[16px] bg-tertiary py-2 px-6 rounded-lg text-white hover:bg-[#915EFF] transition-colors block text-center'
+                  onClick={() => setToggle(!toggle)}
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
           </div>
         </div>

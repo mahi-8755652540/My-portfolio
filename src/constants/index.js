@@ -14,7 +14,6 @@ import {
   mongodb,
   git,
   figma,
-  docker,
   meta,
   starbucks,
   tesla,
@@ -27,7 +26,20 @@ import {
   illustrator,
   coreldraw,
   canva,
+  infosys,
+  tcs,
+  flipkart,
+  shreeSpaace,
+  project1,
+  project2,
+  project3,
 } from "../assets";
+
+// Personal Information
+export const personalInfo = {
+  name: "MS Bhartiya",
+  tagline: "I create stunning web experiences and captivating graphic designs",
+};
 
 export const navLinks = [
   {
@@ -35,8 +47,8 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -116,55 +128,41 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Web Developer",
+    company_name: "Freelance",
+    icon: web,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining responsive websites using HTML, CSS, and JavaScript.",
+      "Collaborating with local businesses to create online presence.",
+      "Ensuring cross-browser compatibility and mobile responsiveness.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Shree Spaace Solution",
-    icon: meta,
+    title: "React Developer",
+    company_name: "Freelance",
+    icon: web,
     iconBg: "#E6DEDD",
-    date: "July 2024 - Present",
+    date: "Mar 2022 - Dec 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built dynamic single-page applications using React.js and Redux.",
+      "Integrated RESTful APIs and optimized frontend performance.",
+      "Collaborated with clients to define requirements and deliver tailored solutions.",
+      "Implemented responsive designs ensuring compatibility across devices.",
+    ],
+  },
+  {
+    title: "Senior Full Stack Developer",
+    company_name: "Shree Spaace Solution",
+    icon: shreeSpaace,
+    iconBg: "#E6DEDD",
+    date: "Jan 2023 - Present",
+    points: [
+      "Leading the development of complex web applications using the MERN stack.",
+      "Architecting scalable and secure backend solutions.",
+      "Mentoring junior developers and guiding best practices.",
+      "Collaborating with cross-functional teams to deliver high-impact digital products.",
     ],
   },
 ];
@@ -172,26 +170,26 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "Outstanding work on our company website! The design is modern, responsive, and perfectly captures our brand identity. Highly recommended!",
-    name: "Rajesh Kumar",
-    designation: "CEO",
-    company: "Tech Solutions India",
+      "I thought it was impossible to make a website as beautiful as our product, but he proved me wrong.",
+    name: "Priya Sharma",
+    designation: "CFO",
+    company: "Acme Co",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
+  },
+  {
+    testimonial:
+      "I've never met a web developer who truly cares about their clients' success like he does.",
+    name: "Rahul Verma",
+    designation: "COO",
+    company: "DEF Corp",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     testimonial:
-      "The graphic designs and branding materials created for our startup were exceptional. Professional, creative, and delivered on time!",
-    name: "Priya Sharma",
-    designation: "Founder",
-    company: "Digital Ventures",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-  },
-  {
-    testimonial:
-      "Amazing UI/UX work! Our website traffic increased by 60% after the redesign. The attention to detail is truly impressive.",
-    name: "Arjun Patel",
-    designation: "Marketing Head",
-    company: "E-Commerce Hub",
+      "After he optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "Vikram Singh",
+    designation: "CTO",
+    company: "456 Enterprises",
     image: "https://randomuser.me/api/portraits/men/46.jpg",
   },
 ];
@@ -216,7 +214,7 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/mahi-8755652540",
   },
   {
     name: "Job IT",
@@ -237,7 +235,7 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/mahi-8755652540",
   },
   {
     name: "Trip Guide",
@@ -258,7 +256,70 @@ const projects = [
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/mahi-8755652540",
+  },
+  {
+    name: "HRMS Software",
+    description:
+      "A comprehensive Human Resource Management System with employee dashboard, attendance tracking, leave management, project management, and real-time analytics built with the MERN stack.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project1,
+    source_code_link: "https://github.com/mahi-8755652540",
+  },
+  {
+    name: "Design Studio Website",
+    description:
+      "Professional website for a web design and graphic design company showcasing portfolio, services, and client testimonials. Features modern animations, responsive layout, and interactive service showcase.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "framer-motion",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project2,
+    source_code_link: "https://github.com/mahi-8755652540",
+  },
+  {
+    name: "Office Interior Portfolio",
+    description:
+      "Elegant portfolio website for an office interior design firm, featuring project galleries, 3D visualizations, before/after comparisons, and client case studies with smooth scrolling animations.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "threejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project3,
+    source_code_link: "https://github.com/mahi-8755652540",
   },
 ];
 
